@@ -6,12 +6,12 @@ var Location = require("./location");
 var Piece = require("./piece");
 
 function testBlankGrid() {
-  var g = Grid.blank();
+  var g = Grid.construct();
   assert(null === g.pieces);
 }
 
 function testPiecePlacement() {
-  var g = Grid.blank();
+  var g = Grid.construct();
   var testPiece = Piece.construct("test");
   var topLeft = Location.construct(0, 0);
 
