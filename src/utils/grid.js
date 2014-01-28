@@ -1,7 +1,7 @@
 "use strict";
 
-exports.blank = function() {
-  return {
-      pieces: null
-  };
+exports.construct = function() {
+  var struct = {};
+  struct.pieces = null;
+  return struct;
 };
