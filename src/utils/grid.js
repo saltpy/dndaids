@@ -1,5 +1,7 @@
 "use strict";
 
-(function() {
-  return {};
-}());
+exports.blank = function() {
+  return {
+      pieces: null
+  };
+};
