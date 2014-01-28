@@ -1,0 +1,22 @@
+{
+    "name": "dndaids",
+    "description": "Simple DnD Game Aids",
+    "version": "0.0.1",
+    "author": "James Salt <saltpy@gmail.com>",
+    "scripts": {
+        "test": "jake"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/saltpy/dndaids.git",
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "jake": "0.5.x",
+        "jshint": "2.1.x"
+    },
+    "engines": {
+        "node": "0.11.x"
+    }
+}
