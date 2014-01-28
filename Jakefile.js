@@ -25,7 +25,14 @@
   });
 
   desc("Test");
-  task("test", []);
+  task("test", [], function() {
+    require("urun")(__dirname, {
+      include: /_test_*.js$/,
+      reporter: "BashReporter",
+      verbose: true
+    });
+    complete();
+  }, { async: true });
 
   function nodeLintOptions() {
     return {

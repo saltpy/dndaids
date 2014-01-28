@@ -14,7 +14,9 @@
     },
     "devDependencies": {
         "jake": "0.5.x",
-        "jshint": "2.1.x"
+        "jshint": "2.1.x",
+        "better-assert": "1.0.0",
+        "urun": "0.0.7"
     },
     "engines": {
         "node": "0.11.x"
