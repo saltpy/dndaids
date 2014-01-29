@@ -1,13 +1,14 @@
 "use strict";
 
-var assert = require("better-assert");
+var test = require("./test_utils");
+
 var Grid = require("./grid");
 var Location = require("./location");
 var Piece = require("./piece");
 
 function testBlankGrid() {
   var g = Grid.construct();
-  assert(null === g.pieces);
+  test.assertStructEqual({}, g);
 }
 
 function testPiecePlacement() {
@@ -15,10 +16,9 @@ function testPiecePlacement() {
   var testPiece = Piece.construct("test");
   var topLeft = Location.construct(0, 0);
 
-  g.place(testPiece, topLeft);
+  Grid.place(g, testPiece, topLeft);
 
-  assert(testPiece === g.contentsOfLocation(topLeft));
-  assert(null !== g.pieces);
+  test.assertStructEqual(testPiece, Grid.retrieve(g, topLeft));
 }
 
 testBlankGrid();
