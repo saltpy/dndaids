@@ -8,7 +8,14 @@ var Piece = require("./piece");
 
 function testBlankGrid() {
   var g = Grid.construct();
-  test.assertStructEqual({}, g);
+  
+  test.assertStructEqual({ x: 0, y: 0 }, g);
+}
+
+function testGridDimensions() {
+  var g = Grid.construct(10, 10);
+
+  test.assertStructEqual({ x: 10, y:10 }, g);
 }
 
 function testPiecePlacement() {
@@ -22,4 +29,5 @@ function testPiecePlacement() {
 }
 
 testBlankGrid();
+testGridDimensions();
 testPiecePlacement();
