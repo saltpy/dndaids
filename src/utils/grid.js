@@ -1,7 +1,13 @@
 "use strict";
 
 exports.construct = function() {
-  var struct = {};
-  struct.pieces = null;
-  return struct;
+  return {};
+};
+
+exports.place = function(grid, piece, loc) {
+  grid[loc] = piece;
+};
+
+exports.retrieve = function(grid, loc) {
+  return grid[loc];
 };
