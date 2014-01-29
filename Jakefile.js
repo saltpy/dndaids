@@ -27,7 +27,7 @@
   desc("Test");
   task("test", [], function() {
     require("urun")(__dirname, {
-      include: /_test_*.js$/,
+      include: /_*_test.js$/,
       reporter: "BashReporter",
       verbose: true
     });
